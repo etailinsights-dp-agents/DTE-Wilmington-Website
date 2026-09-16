@@ -18,7 +18,9 @@
     woman-owned badge                in images/extra/ - corporate bios list Kati as Founder & Owner; add next to the veteran badge once confirmed
   Colors and type are matched to the DTE LA reference screenshots (Sept 2026).
   Notes: the underline squiggle color is hardcoded in the --hl SVG below (keep in sync with --blue).
-  UTM/gclid passthrough lives inline inside the Pipedrive embed div; params must have matching fields in the Pipedrive form to be captured.
+  Attribution: the inline script in the Pipedrive embed div sets window.landing_url (full page URL incl. gclid/UTMs)
+  plus window.gclid / utm_source / utm_medium / utm_campaign. Capture them via hidden fields in the Pipedrive form
+  builder with source "JavaScript variable" and those exact names, mapped to custom fields.
 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -395,8 +397,17 @@ a{color:var(--blue)}
       <div class="contact__media"><img src="images/contact.jpg" alt=""></div>
       <div class="pipedrive-form-wrap">
         <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/c530tHOVNOcIMd25Cr0evrRv29TQrKRHLDGgJ4b6hABprCAU27Oa0QsvhZMV0QlKoj"><script>
-        /* Append the page query string (gclid/utm_*) to the form URL before the loader reads it */
-        (function(){var d=document.currentScript.parentElement;if(location.search.length>1){var b=d.getAttribute('data-pd-webforms');d.setAttribute('data-pd-webforms',b+(b.indexOf('?')>-1?'&':'?')+location.search.slice(1));}})();
+        /* Attribution for the Pipedrive form:
+           1) expose the full page URL + ad params as JS variables - hidden fields in the
+              Pipedrive form builder read these (source: "JavaScript variable", exact names below)
+           2) also append the query string to the form URL as a harmless backup */
+        (function(){
+          window.landing_url = location.href;
+          var q = new URLSearchParams(location.search);
+          ['gclid','utm_source','utm_medium','utm_campaign'].forEach(function(k){ if(q.get(k)) window[k]=q.get(k); });
+          var d=document.currentScript.parentElement;
+          if(location.search.length>1){var b=d.getAttribute('data-pd-webforms');d.setAttribute('data-pd-webforms',b+(b.indexOf('?')>-1?'&':'?')+location.search.slice(1));}
+        })();
         </script><script src="https://webforms.pipedrive.com/f/loader"></script></div>
         <p class="fine"><em>By providing your phone number, you agree to receive text messages and calls from Dog Training Elite Wilmington about your training inquiry. Message frequency varies. Message &amp; data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="https://dogtrainingelite.com/wilmington/privacy-policy">Privacy Policy</a>.</em></p>
       </div>
