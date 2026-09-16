@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you | Dog Training Elite Wilmington</title>
+<meta name="description" content="Thanks for reaching out to Dog Training Elite Wilmington. Book your consult now.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/icon.png">
+<!--
+TYP PAGE STATUS (/typ, post-submit confirmation, Pipedrive redirect target):
+Scheduler URL is LIVE in 2 places (iframe src + fallback link), from Greg DePetro's email Sept 15:
+  https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation
+  Transcribed from a screenshot - before merge, verify the slug against Greg's email (copy-paste it).
+  Per Greg: booking creates a contact, books the call, and adds notes to the event in Pipedrive.
+Pipedrive form config (Darren's side): form settings, after-submission action -> redirect to
+  https://dogtrainingelitewilmington.com/typ (GitHub Pages serves typ.html extensionless)
+noindex, nofollow on purpose: conversion page; also the future Google Ads conversion target
+  (add gtag here when ads run). Note: nofollow stops crawling of links FROM this page; it does
+  not deindex the Pipedrive Scheduler URL itself (that is controlled on Pipedrive's side).
+Reviews: 34 verbatim Google excerpts from Darren's All_Google_Reviews.docx (curated Google set,
+  pulled Sept 16 2026; long ones trimmed at sentence boundaries). Carousel: 6s auto-roll, pause on
+  hover/focus, prev/next arrows + counter (dots dropped at this count), reduced motion = no auto-roll.
+  Header count "34" = reviews actually in the doc (its header claims 37 but numbering skips #4, #10, #29).
+  Update BOTH the h2 and this line when the count changes.
+  Star color #E8A33D is a one-value dial (.stars).
+No announce bar on this page (deliberate - the visitor already converted).
+Hero v3: cutout of Darren's tin-can-phone dog (images/typ-hero.webp, WebP-with-alpha, 612x408, 20K;
+  blown-white background removed by border-connected threshold, white fur and the can string preserved;
+  string fades out toward the headline, bottom fades into the band) sits small at the right BEHIND the
+  text; sky-glow text-shadow keeps overlap readable. Dials: cutout height clamp, right offset, shadow.
+  Decorative (alt=""). LAUNCH FLAG: source looks like a stock comp at preview resolution - confirm the
+  license and swap the licensed hi-res under the SAME filename (no HTML change needed).
+  SUPERSEDES the puppy-on-rotary-phone asset AND images/typ-hero.jpg - neither may exist in the repo.
+  This is an IMAGE PR: ships typ.html + images/typ-hero.webp.
+Logo links back to index.html. Header CTA is "Book now" -> #book.
+Design tokens + header + footer are duplicated from index.html (Sept 2026): any future brand/header/footer
+  change must be applied to BOTH files. Squiggle (--hl) deliberately unused here.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+--blue:#2E6296; /* buttons, headline, links */
+--blue-dark:#24507D; /* button hover */
+--sky:#EFF4FA; /* header, hero, reviews band */
+--white:#fff;
+--ink:#16181D;
+--muted:#5A6272;
+--line:rgba(0,0,0,.12);
+--field-line:#D7DFEA;
+--gold:#E8A33D; /* review stars */
+--max:1500px;
+--gutter:clamp(16px,4vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Nunito Sans",system-ui,sans-serif;font-size:1.05rem;line-height:1.6;color:var(--ink);background:var(--white)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:Poppins,sans-serif;line-height:1.15;margin:0 0 .6em;color:var(--ink);letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700}
+h2{font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--blue)}
+.kicker{font-family:Poppins,sans-serif;font-weight:600;font-size:1.1rem;margin:0 0 .6rem}
+.center{text-align:center}
+.blue{color:var(--blue)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.narrow{max-width:960px;margin-inline:auto}
+.section{padding:clamp(56px,8vw,120px) 0}
+.section--sky{background:var(--sky)}
+/* buttons */
+.btn{display:inline-block;font-family:Poppins,sans-serif;font-weight:600;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em;padding:.95em 2em;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1;transition:background .15s,color .15s,border-color .15s}
+.btn--primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn--primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line);font-size:.85rem}
+.btn--ghost:hover{border-color:var(--ink)}
+.cta{margin-top:2.5rem;text-align:center}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+/* header */
+.header{position:sticky;top:0;z-index:50;background:var(--sky);transition:background .2s,box-shadow .2s}
+.header.is-solid{background:rgba(255,255,255,.97);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.header__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:84px;padding:.75rem var(--gutter);max-width:var(--max);margin:0 auto}
+.header__phone{justify-self:start;font-family:Poppins,sans-serif;font-weight:500;color:var(--blue);text-decoration:none}
+.header__logo{justify-self:center;display:block}
+.header__logo img{height:60px;width:auto}
+.header__cta{justify-self:end}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer;flex-direction:column;gap:7px}
+.burger span{display:block;width:26px;height:1.5px;background:var(--ink)}
+.menu{background:var(--white);padding:1.5rem var(--gutter) 2rem;display:flex;flex-direction:column;gap:1.25rem;align-items:flex-start;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.menu a{font-family:Poppins,sans-serif;font-weight:500;color:var(--ink);text-decoration:none;font-size:1.1rem}
+.menu[hidden]{display:none}
+@media (max-width:767px){
+.header__in{grid-template-columns:auto 1fr auto;min-height:64px}
+.header__logo{grid-column:1;justify-self:start}
+.header__logo img{height:42px}
+.header__phone,.header__cta{display:none}
+.burger{display:flex;grid-column:3}
+}
+/* thank-you hero: message on top of a small puppy-on-the-phone cutout (home-hero language) */
+.hero{padding:clamp(48px,7vw,96px) 0;overflow:hidden}
+.typ-hero{position:relative;max-width:1240px;margin:0 auto;min-height:clamp(240px,28vw,360px);display:flex;align-items:center}
+.typ-hero__dog{position:absolute;right:clamp(0px,2vw,32px);top:50%;transform:translateY(-50%);height:clamp(190px,24vw,320px);width:auto;z-index:0;pointer-events:none}
+.typ-hero__text{position:relative;z-index:1}
+.hero h1{max-width:16ch;margin:0 0 1.2rem;color:var(--blue);text-shadow:0 0 14px var(--sky),0 0 28px var(--sky),0 0 42px var(--sky)}
+.hero__sub{font-family:Poppins,sans-serif;font-weight:700;font-size:clamp(1.2rem,2vw,1.7rem);color:var(--ink);margin:0;text-shadow:0 0 12px var(--sky),0 0 24px var(--sky)}
+@media (max-width:767px){
+.typ-hero{min-height:0;display:block;padding-bottom:clamp(140px,36vw,175px)}
+.typ-hero__dog{top:auto;bottom:-8px;transform:none;right:-6px;height:clamp(130px,32vw,165px)}
+.hero h1{max-width:none}
+}
+/* scheduler */
+.scheduler{max-width:820px;margin:2.5rem auto 0;background:var(--sky)}
+.scheduler iframe{display:block;width:100%;height:min(760px,80vh);border:0}
+.scheduler__note{text-align:center;font-size:.95rem;color:var(--muted);max-width:52ch;margin:1.5rem auto 0}
+/* reviews carousel */
+.carousel{max-width:820px;margin:3rem auto 0}
+.carousel__slides{display:grid}
+.review{grid-area:1/1;opacity:0;visibility:hidden;text-align:center;transition:opacity .45s}
+.review.is-active{opacity:1;visibility:visible}
+.review p{font-size:1.15rem;font-weight:700;color:var(--ink)}
+.review cite{display:block;font-style:italic;font-family:Poppins,sans-serif;font-weight:600;color:var(--ink);margin-top:.5rem}
+.stars{color:var(--gold);font-family:Poppins,sans-serif;font-size:1.35rem;letter-spacing:.18em;margin:0 0 .9rem}
+.carousel__nav{display:flex;gap:1.1rem;justify-content:center;align-items:center;margin-top:1.75rem}
+.carousel__arrow{width:44px;height:44px;border-radius:50%;border:2px solid var(--blue);background:transparent;cursor:pointer;position:relative;padding:0}
+.carousel__arrow::after{content:"";position:absolute;top:50%;left:50%;width:10px;height:10px;border-right:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue)}
+.carousel__arrow--prev::after{transform:translate(-30%,-50%) rotate(135deg)}
+.carousel__arrow--next::after{transform:translate(-70%,-50%) rotate(-45deg)}
+.carousel__arrow:hover{background:var(--white)}
+.carousel__count{font-family:Poppins,sans-serif;font-weight:600;color:var(--muted);margin:0;min-width:6ch;text-align:center}
+/* footer */
+.footer{padding:3.5rem 0 3rem;background:var(--white)}
+.footer__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem;max-width:var(--max);margin:0 auto;padding:0 var(--gutter);text-align:center}
+.footer a{color:var(--blue);text-decoration:underline}
+.footer__brand{display:grid;gap:1.1rem;justify-items:center}
+.footer__brand img{height:120px;width:auto;margin:0 auto}
+.footer__brand .footer__badge{height:84px}
+.footer__social{display:flex;gap:1.1rem;justify-content:center;align-items:center}
+.footer__social a{display:inline-flex;color:var(--blue)}
+.footer__legal{max-width:var(--max);margin:2.75rem auto 0;padding:1.5rem var(--gutter) 0;border-top:1px solid var(--line);text-align:center;font-size:.9rem;color:var(--muted)}
+.footer__legal p{margin:0 0 .5em}
+@media (max-width:767px){.footer__in{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+<div class="header__in">
+<a class="header__phone" href="tel:+19105693647">Call (910) 569 - DOGS</a>
+<a class="header__logo" href="index.html"><img src="images/logo.svg" alt="Dog Training Elite Wilmington"></a>
+<a class="btn btn--primary header__cta" href="#book">Book now</a>
+<button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" id="burger"><span></span><span></span></button>
+</div>
+<nav class="menu" id="menu" hidden>
+<a href="tel:+19105693647">Call (910) 569 - DOGS</a>
+<a class="btn btn--primary" href="#book">Book now</a>
+</nav>
+</header>
+
+<main id="top">
+
+<!-- Thank you -->
+<section class="section section--sky hero">
+<div class="wrap">
+<div class="typ-hero">
+<img class="typ-hero__dog" src="images/typ-hero.webp" alt="" aria-hidden="true">
+<div class="typ-hero__text">
+<h1>Thank you, we'll be in touch.</h1>
+<p class="hero__sub"><span aria-hidden="true">👇</span> But why wait? Book your consult now. <span aria-hidden="true">👇</span></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Scheduler -->
+<section class="section" id="book">
+<div class="wrap narrow">
+<h2 class="center blue">Pick a time that works for your family:</h2>
+<div class="scheduler">
+<iframe src="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" title="Book your consult with Dog Training Elite Wilmington"></iframe>
+</div>
+<p class="scheduler__note">If the scheduler doesn't load, <a href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">open it in a new tab</a> or call <a href="tel:+19105693647">(910) 569 - DOGS</a>.</p>
+</div>
+</section>
+
+<!-- Reviews carousel -->
+<section class="section section--sky">
+<div class="wrap">
+<p class="kicker center">From our Google reviews</p>
+<h2 class="center">34 5-Star Reviews, Zero Unhappy Customers:</h2>
+<div class="carousel" id="carousel" role="region" aria-label="Client reviews">
+<div class="carousel__slides">
+<article class="review is-active">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;My family is proud to say that our pup was trained by Dog Training Elite! We 100% recommend these guys. I love that they come to your home and help train alongside you! Katy is an absolute dog whisperer and is quite amazing at what she does. Katy listens, takes your concerns seriously and really takes her time during training sessions! The price is worth it because having a trained pup is invaluable. Great experience overall!&rdquo;</p>
+<cite>Megan W</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We have had a great experience and our 18 month old golden retriever (Asher) adores Katie (well, we all do). After we had finished our initial puppy training sessions, I had a bad fall &amp; ended up on crutches for six weeks.&rdquo;</p>
+<cite>Cathy Hillyard</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Great knowledge service! See a total difference in my pup! Katy is the best!&rdquo;</p>
+<cite>Laurie Hutchins</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Katy was extremely knowledgeable and helped train Elliott, as well as, us. We had used another trainer with our other dog but did not learn as much as we have learned with Katy and Dog Training Elite. Thank you so much, Katy.&rdquo;</p>
+<cite>Susie Burch</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Anna did a great job helping to make our dog, Archer make a transition from being a stray on the street to a loving, well mannered and obedient dog. We highly recommend and are very happy with the instruction we received!&rdquo;</p>
+<cite>Karen Foland</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We have two littermates German Shepherds and wanted both to be trained. Katie and Anna are the best!!!! They are engaging and able to answer question I have. The way the handle and work with our pups is absolutely amazing. They are also prompt and on time. I would highly recommend them. They also give the pet parents the confidence needed to handle training in small learnable sessions.&rdquo;</p>
+<cite>Robert Murray</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Katy was great. Max (as well as us) has made leaps and bounds. Highly recommend Katy and Dog Training Elite.&rdquo;</p>
+<cite>Tim Holsather</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I have a puppy and Anna has been super working with him and me. She's very patient and great explaining and demonstrating what we should be doing. I was nervous when I first contacted Elite about training but Anna relieved all my nervousness with our first session. I'm very happy that I chose Elite and Anna and I'm excited about the future training that Anna has for us.&rdquo;</p>
+<cite>Ann Justice</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I'm so glad I signed up for DTE! They have helped me understand my dog and we are on our way to becoming a therapy dog team. Highly recommend!&rdquo;</p>
+<cite>Shawna White</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;The absolute best we could have ever done for our dog!! Katy had been fantastic!!&rdquo;</p>
+<cite>Suzanne Jones</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Anna and the entire team at DTE are absolutely amazing. We had Miller enrolled when she was fairly young so we were a bit nervous that it may be overwhelming for her, but Anna was able to build her confidence and was SO patient with her (and us!).&rdquo;</p>
+<cite>Paige Diane</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We are so ever grateful for Katy we learned so much and she brought with her so much knowledge and information.&rdquo;</p>
+<cite>Markim Campbell</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I had an exceptional experience working with Katy Filger from Dog Training Elite of Wilmington. Her professionalism and expertise truly set her apart as a dog trainer. Katy's attention to detail is remarkable-she provides clear, concise instructions that are easy for both dogs and their owners to follow.&rdquo;</p>
+<cite>Ken Elliott</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I just moved into a summer rental with my big dog Henry. He refused to go down the stairs. I called Elite and Katie was here within 3 hours. She was able to get him up and the stairs and treated him so well! Elite saved our vacation. Thank you Katie and the Elite Team! We are so grateful.&rdquo;</p>
+<cite>Kim Wood</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We really enjoyed having Miss Katy our trainer and so did Bella. Bella has learned so much so have my husband and I. They have a wonderful training program. We can really see the difference in Bella so glad we chose Dog Training Elite Wilmington give it a try you and your pet will really benefit from it. Very satisfied 😊&rdquo;</p>
+<cite>Debbie Linton</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;What a wonderful experience we have had with our trainer Katy! She was patient, knowledgeable and extremely easy to work with. Our Emma, a one year old lab was having major jumping up and leash pulling issues. Katy taught us how to handle these issues and reinforce positive behavior. Emma is doing very well.&rdquo;</p>
+<cite>Toni Schollenberger</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Amazing service, professionalism and patience needed for this phase of training! Thank you! Would highly recommend.&rdquo;</p>
+<cite>Brooke Meyers</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Katie was amazing. Personable and professional. We noticed improvements with our dog throughout the process. Thank you!!&rdquo;</p>
+<cite>Dominador Gobaleza</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I can't say enough good things about my experience with Katy and this amazing dog training company! From the very first meeting, Katy was kind, professional, and genuinely invested in helping my dog, Tallulah, become her best self.&rdquo;</p>
+<cite>Amy Leigh Speck</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I reached out to Elite out of desperation... I rescued a dog from the streets, she was abused and sick; skinny and with sores. After bringing her home, she and my Aussie had several major altercations that were scary and dangerous. After bringing Trainer Katy into our home for training, things turned around beautifully.&rdquo;</p>
+<cite>Paula Lowther</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I am looking forward to continuing the training of our dog (Daisy) with Katy her trainer. Katy was professional and easy to work with. She showed great patience with my wife and I because we have never been through a training course with any of our dogs. She deserves the praise.&rdquo;</p>
+<cite>Henry (Hank Barr)</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We are so pleased with Daisy's results from working with Katy. She is soooo good at what she does. We've never used a dog trainer before and she exceeded all our expectations. I know it was a team effort between Daisy, me, my husband and Katy. But Katy was the one who made it happen. Thanks!&rdquo;</p>
+<cite>Mary Barr</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;This is a fantastic group of people. Our golden is training to be a therapy dog and has gone from pulling to healing, staying and following all commands. Both Katie's are excellent. I love how our trainer, Katie, provides positive feedback as we work together.&rdquo;</p>
+<cite>Sharon Roberts</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Katy was professional and knowledgeable about training our mini dachshund. He has learned new skills of how not to be reactive, basic commands, how to heel and walk with us, how not to bolt out the door when it's open, be obedient and proper meet and greets with other dogs. She helped train us as the dog owners too, which is half the battle!&rdquo;</p>
+<cite>Caitlin Sleight</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We have a young Aussie doodle named Rocco. We were bound and determined to have a well trained dog this time around. After much research, we focused on Dog Training Elite Wilmington. We scheduled a consultation in which Kati came to our home.&rdquo;</p>
+<cite>Patricia Hollingsworth</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Kati was very efficient and she helped me with one of my dogs Vader. She took her time to help my mom and I train him. Highly recommend Kati.&rdquo;</p>
+<cite>Stephanie McNeil</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Excellent professionalism and experienced trainer. Working together we accomplished a lot with my Frenchie. Highly recommend.&rdquo;</p>
+<cite>Don Bullard</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;The training for my golden was a fantastic experience in all aspects! I was dealing with a lovable, energetic, sweet 4 year old pup that would not walk on a leash and immediately would hide when I would bring the leash out.&rdquo;</p>
+<cite>Paula Mazzoccante</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;This program was a wonderful fit for me and my dog, Finn. Our trainer, Katy, is excellent to work with. Katy is patient, kind, knowledgeable and Finn loved her (and I did, too!)! I purchased the platinum plan which includes 10 in-home training sessions and then unlimited group classes.&rdquo;</p>
+<cite>Laurie McGeoghegan</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;My name is Shirley and my dog Brandy... Darren and Katy who I now refer to as 'my Angels' provided the training and so much support. All training was done at my home where Brandy was the most comfortable. The results far exceeded my expectations for both Brandy and myself.&rdquo;</p>
+<cite>Shirley Tedesco</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;Loved the service came out to my home and trained my 13 week old Shih Tzu. Zak the trainer was lovely and very helpful. Definitely recommend.&rdquo;</p>
+<cite>Cedric Green</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I got a new puppy recently and Hayley came and helped me set her up for success! She provided awesome tips and was super friendly, I'm very satisfied and can't wait for another session in the future!&rdquo;</p>
+<cite>Kathleen Gilliam</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;I was having trouble walking my strong black lab who likes to take the lead and pull me down the street. He often gets distracted, and wants to follow a scent and would end up dragging me into bushes or the grass. It was painful to say the least.&rdquo;</p>
+<cite>Leanne Young</cite>
+</article>
+<article class="review">
+<p class="stars" role="img" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<p>&ldquo;We had an amazing experience with the team and 2 of our pups we currently have under rescue. In the short time they worked with them, the difference was truly impressive. Thank you! #freedombridgeanimalrescuenc&rdquo;</p>
+<cite>Diana Topjian</cite>
+</article>
+</div>
+<div class="carousel__nav">
+<button type="button" class="carousel__arrow carousel__arrow--prev" id="prev" aria-label="Previous review"></button>
+<p class="carousel__count" id="count" aria-live="polite">1 / 34</p>
+<button type="button" class="carousel__arrow carousel__arrow--next" id="next" aria-label="Next review"></button>
+</div>
+</div>
+<div class="cta"><a class="btn btn--ghost" href="https://maps.app.goo.gl/5ZFJyYusYiNdgi9x7" target="_blank" rel="noopener">View all Google reviews</a></div>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="footer__in">
+<p>Serving Wilmington, NC and surrounding areas<br><a href="mailto:Wilmington@dogtrainingelite.com">Wilmington@dogtrainingelite.com</a><br><a href="tel:+19105693647">(910) 569 - DOGS</a></p>
+<div class="footer__brand">
+<img src="images/insignia.svg" alt="Dog Training Elite">
+<img class="footer__badge" src="images/veteran-owned.png" alt="Veteran owned">
+</div>
+<p class="footer__social">
+<a href="https://www.facebook.com/DogTrainingEliteWilmington" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+<a href="https://www.instagram.com/dtewilmington" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+</p>
+</div>
+<div class="footer__legal">
+<p>Dog Training Elite Wilmington is locally owned and operated by Kati and Troy Chipps. Each Dog Training Elite location is independently owned and operated.</p>
+<p>&copy; 2026 Dog Training Elite Wilmington. All rights reserved. &nbsp;&middot;&nbsp; <a href="https://dogtrainingelite.com/wilmington/privacy-policy">Privacy Policy</a></p>
+</div>
+</footer>
+
+<script>
+(function(){
+// Header turns solid once you scroll off the hero
+var header=document.getElementById('header');
+var onScroll=function(){header.classList.toggle('is-solid',window.scrollY>10)};
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+// Mobile menu
+var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',function(){
+var open=menu.hidden;menu.hidden=!open;burger.setAttribute('aria-expanded',String(open));
+});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.hidden=true;burger.setAttribute('aria-expanded','false')})});
+// Reviews carousel: arrows + counter, 6s auto-roll, pause on hover/focus, reduced motion = no auto-roll
+var slides=[].slice.call(document.querySelectorAll('.carousel .review'));
+var count=document.getElementById('count');
+var idx=0,timer=null;
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+function go(i){
+idx=(i+slides.length)%slides.length;
+slides.forEach(function(s,j){s.classList.toggle('is-active',j===idx);s.setAttribute('aria-hidden',String(j!==idx))});
+count.textContent=(idx+1)+' / '+slides.length;
+}
+function tick(){go(idx+1)}
+function start(){if(!reduce.matches&&!timer)timer=setInterval(tick,6000)}
+function stop(){clearInterval(timer);timer=null}
+function restart(){stop();start()}
+document.getElementById('prev').addEventListener('click',function(){go(idx-1);restart()});
+document.getElementById('next').addEventListener('click',function(){go(idx+1);restart()});
+var box=document.getElementById('carousel');
+box.addEventListener('mouseenter',stop);
+box.addEventListener('mouseleave',start);
+box.addEventListener('focusin',stop);
+box.addEventListener('focusout',start);
+go(0);start();
+})();
+</script>
+</body>
+</html>
