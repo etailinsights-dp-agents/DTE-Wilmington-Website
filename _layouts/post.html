@@ -1,0 +1,29 @@
+---
+layout: base
+---
+<article class="section">
+<div class="wrap post">
+<p class="kicker">Resources</p>
+<h1>{{ page.title }}</h1>
+<p class="post__meta">By {{ page.author }} &middot; {{ page.date | date: "%B %-d, %Y" }}</p>
+{{ content }}
+<div class="post__cta">
+<p>Have a question about your own dog? We train in your home, across Wilmington, Leland, Hampstead, Wrightsville Beach, and Carolina Beach.</p>
+<a class="btn btn--primary" href="/#lead-capture">Get in touch</a>
+</div>
+</div>
+</article>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BlogPosting",
+"headline": {{ page.title | jsonify }},
+"description": {{ page.description | jsonify }},
+"datePublished": "{{ page.date | date_to_xmlschema }}",
+"dateModified": "{{ page.date | date_to_xmlschema }}",
+"author": {"@type": "Person", "name": "Katy", "jobTitle": "Lead Trainer"},
+"publisher": {"@type": "LocalBusiness", "name": "Dog Training Elite Wilmington", "telephone": "+19105693647", "url": "https://dogtrainingelitewilmington.com/"},
+"mainEntityOfPage": "{{ page.url | absolute_url }}",
+"image": "https://dogtrainingelitewilmington.com/images/logo.svg"
+}
+</script>
