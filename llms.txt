@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Dog Training Elite Wilmington
+
+> In-home dog training in Wilmington, North Carolina. Obedience, puppy training, behavior work, and service and therapy dog programs, taught in your home so the whole family learns alongside the dog. Locally owned and operated by Kati and Troy Chipps. Veteran owned.
+
+- Phone: (910) 569-3647, displayed as (910) 569 - DOGS
+- Service area: Wilmington, Leland, Hampstead, Wrightsville Beach, and Carolina Beach, NC
+- Model: trainers come to your home; family participates in every session
+- Lead Trainer: Katy
+- Founder background: Marine Corps military dog handler; Secret Service explosive-detection detail
+
+## Pages
+
+- [Home](https://dogtrainingelitewilmington.com/): services, team, reviews, contact form
+- [Training resources](https://dogtrainingelitewilmington.com/resources/): guides and answers from our trainers
+{% for post in site.posts %}- [{{ post.title }}]({{ post.url | absolute_url }})
+{% endfor %}
