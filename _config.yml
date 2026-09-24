@@ -1,0 +1,13 @@
+title: Dog Training Elite Wilmington
+description: In-home dog training, obedience, and service dog programs across Wilmington, NC and surrounding communities.
+url: "https://dogtrainingelitewilmington.com"
+timezone: America/New_York
+permalink: /resources/:title/
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+feed:
+  path: feed.xml
+exclude:
+  - POSTING.md
