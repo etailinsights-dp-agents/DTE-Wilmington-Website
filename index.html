@@ -20,9 +20,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     Greg                             last name still pending (bio added Sept 16)
     Katy                             last name (Filger, per a Google review) pending confirmation before adding to her card
     review header numbers            send the Google total count + rating to restore a "[N]+ reviews, [R]/5.0" headline
-    $100 intro offer                 confirm the Wilmington price (copied from the LA reference)
+    $100 intro offer                 confirm the Wilmington price (copied from the LA reference); NOTE Oct 5: announce copy now
+                                     sits above a "Request a free consultation" CTA - Darren deciding whether the bar gets
+                                     the free-consult reframe, a confirmed-$100 rewrite, or removal
     Wilmington@dogtrainingelite.com  verify this inbox exists (guessed from the LA pattern)
     woman-owned badge                in images/extra/ - corporate bios list Kati as Founder & Owner; add next to the veteran badge once confirmed
+  CTA change (Oct 5, per Greg DePetro's ads review): hero button added below the sub line; every "Get in touch"
+  renamed "Request a free consultation" (7 instances total incl. the new hero button). Mobile header still hides
+  phone/CTA by design - the hero button is the first-screen action.
   Colors and type are matched to the DTE LA reference screenshots (Sept 2026).
   Notes: the underline squiggle color is hardcoded in the --hl SVG below (keep in sync with --blue).
   Attribution: the inline script in the Pipedrive embed div sets window.landing_url (full page URL incl. gclid/UTMs)
@@ -107,6 +112,7 @@ a{color:var(--blue)}
 .hero{padding:clamp(24px,4vw,64px) 0 0}
 .hero h1{text-align:center;max-width:20ch;margin:0 auto 1.2rem;color:var(--blue)}
 .hero__sub{font-family:Poppins,sans-serif;font-weight:700;font-size:clamp(1.2rem,2vw,1.7rem);text-align:center;color:var(--blue);margin:0 0 1.5rem}
+.hero__cta{text-align:center;margin:0 0 2rem}
 .hero__figure{width:min(620px,90vw);margin:0 auto}
 .hero__figure img{display:block;width:auto;max-width:100%;max-height:min(48vh,520px);margin:0 auto}
 
@@ -222,13 +228,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="header__in">
     <a class="header__phone" href="tel:+19105693647">Call (910) 569 - DOGS</a>
     <a class="header__logo" href="#top"><img src="images/logo.svg" alt="Dog Training Elite Wilmington"></a>
-    <a class="btn btn--primary header__cta" href="#lead-capture">Get in touch</a>
+    <a class="btn btn--primary header__cta" href="#lead-capture">Request a free consultation</a>
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" id="burger"><span></span><span></span></button>
   </div>
   <nav class="menu" id="menu" hidden>
     <a href="tel:+19105693647">Call (910) 569 - DOGS</a>
     <a href="/resources/">Resources</a>
-    <a class="btn btn--primary" href="#lead-capture">Get in touch</a>
+    <a class="btn btn--primary" href="#lead-capture">Request a free consultation</a>
   </nav>
 </header>
 
@@ -239,6 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <h1>WE HELP DOGS BECOME THEIR BEST SELVES</h1>
       <p class="hero__sub">in Wilmington and surrounding areas</p>
+      <p class="hero__cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></p>
       <div class="hero__figure"><img src="images/hero.webp" alt="A happy, well-trained dog"></div>
     </div>
   </section>
@@ -252,7 +259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><h3><span class="step-num">Step 2:</span> Learn the skills to keep your dog's good behavior for life</h3></li>
         <li><h3><span class="step-num">Step 3:</span> Enjoy having a well-mannered dog who listens to you at all times</h3></li>
       </ol>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Get in touch</a></div>
+      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
     </div>
   </section>
 
@@ -281,7 +288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>Does your dog brighten every room they are in? Get them certified as a therapy dog. Bring comfort and joy to those who need it most.</p>
         </article>
       </div>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Get in touch</a></div>
+      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
     </div>
   </section>
 
@@ -303,7 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         -->
       </div>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Get in touch</a></div>
+      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
     </div>
   </section>
 
@@ -376,7 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="split__media"><img src="images/guarantee.jpg" alt=""></div>
       </div>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Get in touch</a></div>
+      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
     </div>
   </section>
 
