@@ -29,6 +29,9 @@ author: "Katy, Lead Trainer"
   both extract from pages built this way.
 - Name the towns naturally: Wilmington, Leland, Hampstead, Wrightsville Beach, Carolina Beach.
 - One verbatim Google review quote per post is encouraged (blockquote, attribute by name).
+- Link once to the matching service page when one exists (for example, a puppy topic links to
+  /puppy-training/). The current service pages are listed under "Services" in /llms.txt, which
+  updates itself as pages launch.
 - NO em dashes anywhere. Sentence case headings. 500 to 900 words.
 - NO pricing, offer, or guarantee specifics until Darren confirms them in writing. No medical or
   legal claims beyond the ADA basics already established in the service dog post.
@@ -80,7 +83,8 @@ top to bottom every run; the Add-a-post steps and Content rules above apply in f
 
 - Changed paths: the ONE new `_posts/` file, plus POSTING.md only when refilling the topic bank.
   Nothing else, ever, in a weekly post PR. index.html, typ.html, `_layouts/`, `_config.yml`,
-  robots.txt, llms.txt, CNAME, README.md, images/, videos/ are all out of bounds here.
+  robots.txt, llms.txt, CNAME, README.md, images/, videos/, and the service pages (any file
+  with `layout: service`, such as puppy-training.md) are all out of bounds here.
 - PR body: post title, final URL, the topic-bank line consumed, and a "Needs Darren" list (or
   "none").
 - Merge only after Darren's explicit approval.
@@ -111,6 +115,6 @@ debug by editing layouts or config on your own.
 
 ## Do not touch
 
-CNAME, README.md, index.html, typ.html, the videos/ and images/ directories. This blog is
-additive. The instant off-switch, if a Pages build ever breaks the site, is committing a
+CNAME, README.md, index.html, typ.html, the service pages (`layout: service`), the videos/ and
+images/ directories. This blog is additive. The instant off-switch, if a Pages build ever breaks the site, is committing a
 `.nojekyll` file to the repo root: Jekyll processing stops and the site serves raw files again.
