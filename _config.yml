@@ -11,3 +11,9 @@ feed:
   path: feed.xml
 exclude:
   - POSTING.md
+
+# Shared values for every Jekyll-rendered page (service pages, blog, layouts). index.html and
+# typ.html are raw passthrough files with their own copies: change a value here AND there.
+scheduler_url: "https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation"
+announce: "LIMITED TIME ONLY: Book your first private in-home session for ONLY $100"
+service_area: ["Wilmington NC", "Leland NC", "Hampstead NC", "Wrightsville Beach NC", "Carolina Beach NC"]
