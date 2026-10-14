@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TMX5MTHS');</script>
 <!-- End Google Tag Manager -->
 <title>Dog Training Wilmington NC | Dog Training Elite Wilmington</title>
-<meta name="description" content="In-home dog training in Wilmington, NC and surrounding areas. Obedience, puppy, service dog and therapy dog training.">
+<meta name="description" content="Professional in-home dog training in Wilmington, NC for puppies, adult dogs and problem behaviors, plus service dog training. Free phone consultation.">
 <link rel="canonical" href="https://dogtrainingelitewilmington.com/">
 <link rel="icon" href="images/icon.png">
 
@@ -21,16 +21,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     Greg                             last name still pending (bio added Sept 16)
     Katy                             last name (Filger, per a Google review) pending confirmation before adding to her card
     review header numbers            send the Google total count + rating to restore a "[N]+ reviews, [R]/5.0" headline
-    $100 intro offer                 confirm the Wilmington price (copied from the LA reference); NOTE Oct 5: announce copy now
-                                     sits above a "Request a free consultation" CTA - Darren deciding whether the bar gets
-                                     the free-consult reframe, a confirmed-$100 rewrite, or removal
+    $100 intro offer                 confirm the Wilmington price (copied from the LA reference); Darren decided (Oct 2026) to keep
+                                     the announce bar as-is alongside the free-consultation CTAs
     Wilmington@dogtrainingelite.com  verify this inbox exists (guessed from the LA pattern)
-    woman-owned badge                in images/extra/ - corporate bios list Kati as Founder & Owner; add next to the veteran badge once confirmed
-  CTA change (Oct 5, per Greg DePetro's ads review): hero button added below the sub line; every "Get in touch"
-  renamed "Request a free consultation" (7 instances total incl. the new hero button). Mobile header still hides
-  phone/CTA by design - the hero button is the first-screen action.
-  Oct 5 (2): mobile hero image capped at 300px (one-line media query) so the full dog renders under the button
-  on the first screen instead of cropping mid-torso at the fold. Desktop unchanged; 300px is the dial.
+    woman-owned badge                approved; waiting on the badge image file, then add next to the veteran badge
+    service dog page                 when /service-dog-training/ launches, point the service and therapy card links at it
+  CTAs (Oct 14, Greg DePetro's landing-page brief): two actions everywhere. Primary "Book a free phone consultation"
+  opens the Pipedrive scheduler in a new tab; secondary "Request a callback" jumps to the form below (#lead-capture).
+  Hero, header, mobile menu and four section CTAs carry them. Mobile header still hides phone/CTA by design: the hero
+  pair is the first-screen action. The scheduler URL also lives in _config.yml (Jekyll pages) and typ.html: change all three.
+  Hero H1 is Greg's keyword headline; the brand line "We help dogs become their best selves" stays as the sub line.
+  Service cards link into the specialty pages (/puppy-training/, /dog-behavior-training/).
+  Mobile hero image capped at 300px (Oct 5); 300px is the dial.
   Colors and type are matched to the DTE LA reference screenshots (Sept 2026).
   Notes: the underline squiggle color is hardcoded in the --hl SVG below (keep in sync with --blue).
   Attribution: the inline script in the Pipedrive embed div sets window.landing_url (full page URL incl. gclid/UTMs)
@@ -82,7 +84,12 @@ a{color:var(--blue)}
 .btn--primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
 .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line);font-size:.85rem}
 .btn--ghost:hover{border-color:var(--ink)}
+.btn--outline{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn--outline:hover{background:var(--blue);color:#fff}
 .cta{margin-top:2.5rem;text-align:center}
+.cta-pair{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+@media (max-width:767px){.cta-pair .btn{width:100%;max-width:380px}}
+@media (max-width:400px){.cta-pair .btn{padding:.95em 1.1em;font-size:.88rem}}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
 /* announcement bar */
@@ -97,12 +104,20 @@ a{color:var(--blue)}
 .header__phone{justify-self:start;font-family:Poppins,sans-serif;font-weight:500;color:var(--blue);text-decoration:none}
 .header__logo{justify-self:center;display:block}
 .header__logo img{height:60px;width:auto}
-.header__cta{justify-self:end}
+.header__cta{justify-self:end;white-space:nowrap}
 .burger{display:none;background:none;border:0;padding:10px;cursor:pointer;flex-direction:column;gap:7px}
 .burger span{display:block;width:26px;height:1.5px;background:var(--ink)}
 .menu{background:var(--white);padding:1.5rem var(--gutter) 2rem;display:flex;flex-direction:column;gap:1.25rem;align-items:flex-start;box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .menu a{font-family:Poppins,sans-serif;font-weight:500;color:var(--ink);text-decoration:none;font-size:1.1rem}
+.menu a.btn--primary{color:#fff}
+.menu a.btn--outline{color:var(--blue)}
+.menu a.btn{font-size:.95rem;width:100%;max-width:380px;text-align:center}
+@media (max-width:400px){.menu a.btn{padding:.95em 1.1em;font-size:.88rem}}
 .menu[hidden]{display:none}
+@media (min-width:768px) and (max-width:1100px){
+  .header__in{grid-template-columns:auto 1fr auto;column-gap:16px}
+  .header__cta{font-size:.8rem;padding:.85em 1.3em}
+}
 @media (max-width:767px){
   .header__in{grid-template-columns:auto 1fr auto;min-height:64px}
   .header__logo{grid-column:1;justify-self:start}
@@ -113,9 +128,11 @@ a{color:var(--blue)}
 
 /* hero */
 .hero{padding:clamp(24px,4vw,64px) 0 0}
-.hero h1{text-align:center;max-width:20ch;margin:0 auto 1.2rem;color:var(--blue)}
-.hero__sub{font-family:Poppins,sans-serif;font-weight:700;font-size:clamp(1.2rem,2vw,1.7rem);text-align:center;color:var(--blue);margin:0 0 1.5rem}
-.hero__cta{text-align:center;margin:0 0 2rem}
+.hero h1{text-align:center;max-width:20ch;margin:0 auto 1rem;color:var(--blue);font-size:clamp(1.85rem,1rem + 4vw,3.8rem)}
+.hero__sub{font-family:Poppins,sans-serif;font-weight:700;font-size:clamp(1.1rem,2vw,1.7rem);text-align:center;color:var(--blue);max-width:36ch;margin:0 auto 1.5rem}
+.hero__cta{margin:0 0 2rem}
+.intro{max-width:62ch;margin:0 auto 3.5rem}
+.card__link{display:inline-block;margin-top:1.25rem;font-family:Poppins,sans-serif;font-weight:600;font-size:1rem;text-underline-offset:3px}
 .hero__figure{width:min(620px,90vw);margin:0 auto}
 .hero__figure img{display:block;width:auto;max-width:100%;max-height:min(48vh,520px);margin:0 auto}
 @media (max-width:767px){.hero__figure img{max-height:300px}}
@@ -232,13 +249,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="header__in">
     <a class="header__phone" href="tel:+19105693647">Call (910) 569 - DOGS</a>
     <a class="header__logo" href="#top"><img src="images/logo.svg" alt="Dog Training Elite Wilmington"></a>
-    <a class="btn btn--primary header__cta" href="#lead-capture">Request a free consultation</a>
+    <a class="btn btn--primary header__cta" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" id="burger"><span></span><span></span></button>
   </div>
   <nav class="menu" id="menu" hidden>
     <a href="tel:+19105693647">Call (910) 569 - DOGS</a>
     <a href="/resources/">Resources</a>
-    <a class="btn btn--primary" href="#lead-capture">Request a free consultation</a>
+    <a class="btn btn--primary" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
+    <a class="btn btn--outline" href="#lead-capture">Request a callback</a>
   </nav>
 </header>
 
@@ -247,9 +265,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Hero -->
   <section class="section section--sky hero">
     <div class="wrap">
-      <h1>Dog Training in Wilmington, NC</h1>
-      <p class="hero__sub">We help dogs become their best selves — in Wilmington and surrounding areas</p>
-      <p class="hero__cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></p>
+      <h1>Professional Dog Training in Wilmington, NC</h1>
+      <p class="hero__sub">We help dogs become their best selves in Wilmington and surrounding areas</p>
+      <div class="cta-pair hero__cta">
+        <a class="btn btn--primary" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
+        <a class="btn btn--outline" href="#lead-capture">Request a callback</a>
+      </div>
       <div class="hero__figure"><img src="images/hero.webp" alt="A happy, well-trained dog"></div>
     </div>
   </section>
@@ -257,13 +278,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- How it works -->
   <section class="section">
     <div class="wrap narrow">
+      <p class="lead intro">Get personalized, professional dog training for <a href="/puppy-training/">puppies</a>, adult dogs and <a href="/dog-behavior-training/">dogs with challenging behaviors</a>. Dog Training Elite Wilmington helps owners build reliable obedience, better behavior and a stronger relationship with their dogs through practical training designed for everyday life.</p>
       <h2 class="center">Elite dog training made <span class="hl">easy</span></h2>
       <ol class="steps">
         <li><h3><span class="step-num">Step 1:</span> Have your dog trained in the comfort of your home</h3></li>
         <li><h3><span class="step-num">Step 2:</span> Learn the skills to keep your dog's good behavior for life</h3></li>
         <li><h3><span class="step-num">Step 3:</span> Enjoy having a well-mannered dog who listens to you at all times</h3></li>
       </ol>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
+      <div class="cta cta-pair">
+        <a class="btn btn--primary" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
+        <a class="btn btn--outline" href="#lead-capture">Request a callback</a>
+      </div>
     </div>
   </section>
 
@@ -275,24 +300,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="circle"><img src="images/obedience.jpg" alt=""></div>
           <h3>Obedience training</h3>
           <p>Say goodbye to negotiating. Say hello to a dog who always listens to you. Even around the toughest distractions. Take your dog to any dog-friendly spot, stress-free.</p>
+          <a class="card__link" href="/dog-behavior-training/">Problem behaviors? See behavior training</a>
         </article>
         <article class="card">
           <div class="circle"><img src="images/service-dog.jpg" alt=""></div>
           <h3>Service dog training</h3>
           <p>Transform your dog into a reliable companion you can take anywhere. Through specialized training, your dog can perform tasks unique to your needs, making life easier for you.</p>
+          <a class="card__link" href="/resources/service-dog-and-therapy-dog-training-wilmington/">How service dog training works</a>
         </article>
         <article class="card">
           <div class="circle"><img src="images/puppy.jpg" alt=""></div>
           <h3>Puppy training</h3>
           <p>Welcoming a new puppy can be challenging. We make it easy. Start on the right foot and enjoy a happy, well-mannered pup for the rest of your life.</p>
+          <a class="card__link" href="/puppy-training/">Puppy training in Wilmington</a>
         </article>
         <article class="card">
           <div class="circle"><img src="images/therapy-dog.jpg" alt=""></div>
           <h3>Therapy dog training</h3>
           <p>Does your dog brighten every room they are in? Get them certified as a therapy dog. Bring comfort and joy to those who need it most.</p>
+          <a class="card__link" href="/resources/service-dog-and-therapy-dog-training-wilmington/">How therapy dog training works</a>
         </article>
       </div>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
+      <div class="cta cta-pair">
+        <a class="btn btn--primary" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
+        <a class="btn btn--outline" href="#lead-capture">Request a callback</a>
+      </div>
     </div>
   </section>
 
@@ -314,7 +346,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         -->
       </div>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
+      <div class="cta cta-pair">
+        <a class="btn btn--primary" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
+        <a class="btn btn--outline" href="#lead-capture">Request a callback</a>
+      </div>
     </div>
   </section>
 
@@ -387,7 +422,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="split__media"><img src="images/guarantee.jpg" alt=""></div>
       </div>
-      <div class="cta"><a class="btn btn--primary" href="#lead-capture">Request a free consultation</a></div>
+      <div class="cta cta-pair">
+        <a class="btn btn--primary" href="https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation" target="_blank" rel="noopener">Book a free phone consultation</a>
+        <a class="btn btn--outline" href="#lead-capture">Request a callback</a>
+      </div>
     </div>
   </section>
 
