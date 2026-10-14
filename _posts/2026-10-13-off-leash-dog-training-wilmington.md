@@ -36,4 +36,4 @@ That kind of change is the typical story. Not because the dog was exceptional, b
 
 Dog Training Elite has been training dogs for over 40 years. Our Wilmington location brings that same depth of expertise to families across Wilmington, Leland, Hampstead, Wrightsville Beach, Carolina Beach, and Castle Hayne. Custom, in-home programs. Real results that last. If you are looking for off-leash training that actually holds, we are the right call.
 
-[Book a free phone consultation](https://dogtrainingelitewilmington.pipedrive.com/scheduler/d9lyMQCK/free-dog-training-consultation) and we will tell you exactly what is possible for your dog.
+<a href="{{ site.scheduler_url }}" target="_blank" rel="noopener">Book a free phone consultation</a> and we will tell you exactly what is possible for your dog.
