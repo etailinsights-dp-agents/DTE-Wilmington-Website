@@ -11,6 +11,12 @@ feed:
   path: feed.xml
 exclude:
   - POSTING.md
+# typ.html is the noindex thank-you page (Ads conversion target): keep it out of sitemap.xml
+defaults:
+  - scope:
+      path: "typ.html"
+    values:
+      sitemap: false
 
 # Shared values for every Jekyll-rendered page (service pages, blog, layouts). index.html and
 # typ.html are raw passthrough files with their own copies: change a value here AND there.
