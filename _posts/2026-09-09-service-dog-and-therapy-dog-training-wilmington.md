@@ -16,7 +16,7 @@ These three terms get mixed up constantly, and the differences matter, legally a
 
 ## How service dog training works here
 
-Real service dog work is a long, staged process, and it starts in the same place all good training starts: rock-solid obedience. Before a dog can alert to anything, it has to be reliable around distractions, neutral toward strangers and other dogs, and steady in public spaces. From that foundation, training moves to the specific tasks that serve the handler's needs, and then to proofing those tasks everywhere the team will go.
+Real service dog work is a long, staged process, and it starts in the same place all good training starts: rock-solid obedience. Before a dog can alert to anything, it has to be reliable around distractions, neutral toward strangers and other dogs, and steady in public spaces. From that foundation, training moves to the specific tasks that serve the handler's needs, and then to proofing those tasks everywhere the team will go. Our [service dog training](/service-dog-training/) page covers the programs we offer, from PTSD and psychiatric service dogs to mobility and autism support.
 
 Our team takes this work seriously because of where it comes from. Our founder Troy Chipps handled military working dogs in the Marine Corps out of Jacksonville and later worked explosive-detection dogs on a Secret Service detail protecting President George H.W. Bush. That is the standard of reliability this kind of training is built on: dogs whose behavior holds up when it matters.
 
