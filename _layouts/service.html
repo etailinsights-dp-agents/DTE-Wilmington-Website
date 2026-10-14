@@ -64,7 +64,10 @@ layout: base
 "description":{{ page.description | jsonify }},
 "url":"{{ page.url | absolute_url }}",
 "areaServed":{{ site.service_area | jsonify }},
-"provider":{"@type":"LocalBusiness","@id":"https://dogtrainingelitewilmington.com/#business","name":"Dog Training Elite Wilmington","telephone":"+19105693647","url":"https://dogtrainingelitewilmington.com/"}}
+{% if page.programs %}"hasOfferCatalog":{"@type":"OfferCatalog","name":{{ page.service_type | jsonify }},"itemListElement":[{% for p in page.programs %}
+{"@type":"Offer","itemOffered":{"@type":"Service","name":{{ p.name | jsonify }},"description":{{ p.summary | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}
+]},
+{% endif %}"provider":{"@type":"LocalBusiness","@id":"https://dogtrainingelitewilmington.com/#business","name":"Dog Training Elite Wilmington","telephone":"+19105693647","url":"https://dogtrainingelitewilmington.com/"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in page.faqs %}
